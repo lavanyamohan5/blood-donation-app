@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import Donors from "./pages/Donors";
 import Requests from "./pages/Requests";
 import RegisterDonor from "./pages/RegisterDonor";
+import Request from "./pages/BloodRequest";
+
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);

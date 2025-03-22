@@ -1,175 +1,519 @@
-/* Global Styles */
+/* 🌍 Global Styles */
 body {
     font-family: "Poppins", Arial, sans-serif;
-    background-color: #f4f7fc;
+    background-color: #f8f9fc;
     margin: 0;
     padding: 0;
     color: #333;
 }
 
-/* Centered Container for Forms */
+/* 🚀 Container */
 .container {
     width: 100%;
-    max-width: 420px;
-    margin: 60px auto;
-    padding: 25px;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    transition: all 0.3s ease-in-out;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
 
-.container:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* Form Headings */
-h2 {
+/* 🌟 Hero Section */
+.hero {
+    background: linear-gradient(135deg, #badeeb, #ca52ca);
+    color: white;
     text-align: center;
-    color: #222;
-    font-size: 24px;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* 📊 Statistics Section */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.stat-box {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: scale(1.05);
+}
+
+.stat-box h2 {
+    font-size: 28px;
+    color: #020202;
+}
+
+/* 🔄 Steps Section */
+.steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.step {
+    flex: 1;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    background: #eaeaea;
+}
+
+/* 🎉 Success Stories */
+.stories {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.story-card {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🔥 Call to Action */
+.btn-main {
+    background: linear-gradient(135deg, #badeeb, #ca52ca);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    margin: 0 10px; /* Adds space on both sides */
+}
+
+.btn-main:hover {
+    background: #9ce0ff;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .stats,
+    .steps,
+    .stories {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+/* 🔄 How It Works Section */
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: nowrap; /* Ensures boxes stay in a single row */
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    padding: 10px 0;
+}
+
+/* 📌 Step Box */
+.step-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 300px; /* Fixed width for equal size */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-decoration: none;
+    color: inherit;
+    flex: 0 0 300px; /* Prevents shrinking */
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎭 Icons */
+.step-icon {
+    font-size: 3rem;
+    color: #dc3545;
     margin-bottom: 15px;
 }
 
+/* 📌 Titles */
+.step-card h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* 📌 Description */
+.step-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* 🎯 Underline Effect */
+.underline {
+    width: 50px;
+    height: 4px;
+    background-color: #dc3545;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* 🖥 Responsive Design */
+@media (max-width: 900px) {
+    .steps-container {
+        overflow-x: auto; /* Allows horizontal scroll on small screens */
+        justify-content: flex-start; /* Align to the left */
+    }
+}
+  
+/* 🌟 Dashboard Background */
+.dashboard-bg {
+    background: url('/images/bg.jpg') no-repeat center center/cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* 🏆 Text Shadow for Readability */
+.text-white {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+    .dashboard-bg {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .text-white {
+        font-size: 24px;
+    }
+}
+
+/* 🔴 Blood Request Form Styling */
+.request-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.request-container h2 {
+    color: #d9534f;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.request-container p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
 /* Input Fields */
-.input-field {
+.request-container input,
+.request-container select {
     width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 2px solid #ccc;
-    border-radius: 8px;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 16px;
-    transition: 0.3s;
-    background-color: #f9f9f9;
 }
 
-.input-field:focus {
-    border-color: #4a90e2;
-    outline: none;
-    background-color: white;
-}
-
-/* Buttons */
-.btn {
+/* Submit Button */
+.btn-submit {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(135deg, #4a90e2, #007aff);
+    background: #d9534f;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 17px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: linear-gradient(135deg, #007aff, #0056b3);
-    transform: scale(1.05);
-}
-
-/* Navigation Bar */
-.navbar {
-    background: #222;
-    padding: 12px 0;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 12px 18px;
+    border-radius: 5px;
     font-size: 16px;
-    font-weight: 500;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.navbar a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 6px;
-    padding: 12px 20px;
+.btn-submit:hover {
+    background: #c9302c;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-    }
-
-    .navbar a {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
+/* Nearby Donors Section */
+.donors-container {
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
 }
-/* Form Container */
-.form-container {
+
+.donors-container h3 {
+    color: #28a745;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.donor-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.donor-card p {
+    margin: 5px 0;
+}
+
+.donor-card button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.donor-card button:hover {
+    background: #218838;
+}
+
+/* Emergency Alerts Section */
+.emergency-alerts {
+    background: #f2dede;
+    color: #a94442;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border: 1px solid #ebccd1;
+    font-size: 18px;
+    text-align: center;
+}
+
+.emergency-alerts h4 {
+    margin-bottom: 10px;
+}
+
+/* Request History Section */
+.history-container {
+    margin-top: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.history-container h3 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.history-list {
+    list-style: none;
+    padding: 0;
+}
+
+.history-list li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-list li .status {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.history-list li .status.pending {
+    color: #ffc107;
+}
+
+.history-list li .status.cancelled {
+    color: #dc3545;
+}
+/* src/styles/DonorRegistration.css */
+
+.donor-registration {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease;
+  }
+  
+  .donor-registration:hover {
+    transform: translateY(-5px);
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+  }
+  
+  .donor-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 420px;
-    margin: 60px auto;
-    padding: 25px;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Label Styling */
-.form-group {
-    width: 100%;
-    margin-bottom: 12px;
-}
-
-/* Align Labels & Inputs */
-.form-group label {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 5px;
-    color: #444;
-}
-
-.input-field {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: 0.3s;
+    gap: 20px;
+  }
+  
+  .donor-form input,
+  .donor-form select,
+  .donor-form textarea {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
     background-color: #f9f9f9;
-    display: block;
-}
-
-.input-field:focus {
-    border-color: #4a90e2;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .donor-form input:focus,
+  .donor-form select:focus,
+  .donor-form textarea:focus {
+    border-color: #28a745;
     outline: none;
-    background-color: white;
-}
-
-/* Button Styling */
-.btn {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(135deg, #4a90e2, #007aff);
+    background-color: #fff;
+  }
+  
+  .donor-form textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .donor-form button {
+    background-color: #28a745;
     color: white;
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    border-radius: 10px;
     border: none;
-    border-radius: 8px;
-    font-size: 17px;
     cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: linear-gradient(135deg, #007aff, #0056b3);
-    transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .form-container {
-        width: 90%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  
+  .donor-form button:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .donor-form button:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+  }
+  
+  .donor-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .donor-form .form-group label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .donor-form .form-group input,
+  .donor-form .form-group select,
+  .donor-form .form-group textarea {
+    font-size: 1rem;
+    padding: 14px;
+    border-radius: 8px;
+  }
+  
+  .donor-form .checkbox-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .donor-form .checkbox-group input {
+    transform: scale(1.4);
+  }
+  
+  .donor-form .checkbox-group label {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Error Messages */
+  .donor-form .error-message {
+    color: red;
+    font-size: 0.9rem;
+    padding: 5px 0;
+    margin-top: -10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .donor-registration {
+      padding: 25px;
     }
-}
+  
+    .donor-form {
+      gap: 18px;
+    }
+  
+    .donor-form button {
+      font-size: 1rem;
+      padding: 12px 20px;
+    }
+  }
+  
+  
