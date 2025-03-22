@@ -1,0 +1,56 @@
+/* Main Page Layout */
+.main-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Left Side: Dashboard */
+.dashboard {
+    flex: 1;
+    background-color: #222;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard Title */
+.dashboard h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Navigation */
+.dashboard nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.dashboard nav ul li {
+    margin: 10px 0;
+}
+
+.dashboard nav ul li a {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.dashboard nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Right Side: Content */
+.content-section {
+    flex: 3;
+    padding: 50px;
+}

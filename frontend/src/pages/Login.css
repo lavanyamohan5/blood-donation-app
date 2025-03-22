@@ -1,0 +1,112 @@
+/* Full Page Background */
+.login-container {
+    width: 100%;
+    height: 100vh;
+    background: url("D:\blood-donation-app\frontend\public\images/background.png") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Adjust based on image position */
+    padding-left: 10%; /* Adjust this to move form left/right */
+    position: relative;
+}
+
+/* Apply a Blur Effect for Readability */
+.login-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Light dark overlay */
+    backdrop-filter: blur(0px); /* Soft Blur */
+}
+
+/* Login Form Box */
+.login-box {
+    position: relative;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-container {
+        justify-content: center; /* Center for small screens */
+        padding-left: 0;
+    }
+}
+.social-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+/* Social Login Buttons */
+/* Social Login Buttons - Styled Like Google */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 12px; /* Space between icon and text */
+    width: 100%;
+    max-width: 350px; /* Same as Google */
+    height: 40px; /* Same as Google */
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Same as Google */
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: auto;
+    color: #333;
+    margin: 10px auto;
+    transition: background-color 0.2s ease;
+}
+
+.social-btn img {
+    width: 20px; /* Adjusted for perfect alignment */
+    height: 20px;
+    object-fit: contain;
+    margin-right: 60px;
+}
+
+.social-btn span {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.social-btn:hover {
+    background-color: #f5f5f5;
+}
